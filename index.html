@@ -75,40 +75,63 @@ body{
 
 .cover-verse {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 20px; /* Increased from 14px */
+  font-size: 20px;
   font-style: italic;
-  color: #6b7c3e;
-  font-weight: 600;
-  line-height: 1.6;
+  font-weight: 300; /* Reduced from 600 to 500 */
+  color: #4a5e20;
+  line-height: 1.4;
   margin-bottom: 32px;
-  max-width: 320px; /* Increased slightly to accommodate larger text */
+  max-width: 320px;
 }
 
 .cover-verse span {
   display: block;
   margin-top: 8px;
-  font-size: 20px; /* Increased from 13px to keep it proportional */
-  font-weight: 500; /* Makes the reference (Psalms 126:3) slightly bolder too */
-  text-transform: uppercase; /* Optional: adds a nice formal touch to the reference */
+  font-size: 14px;
+  font-weight: 300; /* Keeping the reference at regular weight for contrast */
+  text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.monogram-wrap{
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  border:1.5px solid #8a9e4a;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin:0 auto 28px;
-  position:relative;
+.monogram-container {
+  width: 220px; /* Increased from 180px */
+  height: 350px; /* Increased from 250px */
+  border-radius: 50% / 50%;
+  border: 1.5px solid #8a9e4a; 
+  display: flex;
+  background-color: #4A5E20; /* Fills the inner circle with green */
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto 30px; /* Slightly reduced top margin to fit better on mobile */
+  position: relative;
+  /* Keeping the elegant double ring effect */
+  box-shadow: 0 0 0 4px #faf8f3, 0 0 0 6px #8a9e4a;
+  z-index: 5;
 }
 
-.monogram-inner{
-  font-family:'Great Vibes',cursive;
-  font-size:64px;
-  color:#6b7c3e;
+.m-t {
+  font-family: 'Great Vibes', cursive;
+  font-size: 80px; /* Very large and dominant */
+  color: #F7F4EC;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-weight: 400;
+}
+
+.m-l {
+  font-family: 'Great Vibes', cursive;
+  font-size: 85px; /* Slightly larger to allow the flourishes to spread */
+  color: #F7F4EC;
+  position: absolute;
+  top: 69%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  /* Adjusting opacity slightly allows the intersection of the letters to look more integrated */
+  opacity: 1; 
 }
 
 .names-big{
@@ -528,8 +551,11 @@ and we are filled with joy."
 <span>— Psalms 126:3</span>
 </div>
 
-<div class="monogram-wrap">
-<div class="monogram-inner">T/L</div>
+<div class="monogram-container">
+<div class="monogram-inner">
+  <span class="m-t">T</span>
+  <span class="m-l">L</span>
+</div>
 </div>
 
 <div class="names-big">
