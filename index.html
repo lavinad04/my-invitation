@@ -50,13 +50,14 @@ body{
   display:none;
   flex-direction:column;
   align-items:center;
+  justify-content: flex-start;
   width:100%;
-  height:calc(100dvh - 84px);
+  height: 100%;
   overflow-y:auto;
   overflow-x:hidden;
   position:relative;
   padding-top:env(safe-area-inset-top);
-  padding-bottom:30px;
+  padding-bottom:50px;
 }
 
 .screen.active{
@@ -93,45 +94,46 @@ body{
   letter-spacing: 1px;
 }
 
+/* Optimized for Mobile View */
 .monogram-container {
-  width: 220px; /* Increased from 180px */
-  height: 350px; /* Increased from 250px */
+  width: 180px; 
+  height: 240px; /* Reduced slightly for smaller screens */
+  min-height: 240px; /* Forces visibility */
   border-radius: 50% / 50%;
   border: 1.5px solid #8a9e4a; 
+  background-color: #8a9e4a; 
   display: flex;
-  background-color: #4A5E20; /* Fills the inner circle with green */
   align-items: center;
   justify-content: center;
-  margin: 10px auto 30px; /* Slightly reduced top margin to fit better on mobile */
+  margin: 30px auto; /* Centered margin */
   position: relative;
-  /* Keeping the elegant double ring effect */
   box-shadow: 0 0 0 4px #faf8f3, 0 0 0 6px #8a9e4a;
-  z-index: 5;
+  z-index: 10;
+  flex-shrink: 0; /* Prevents flexbox from squishing the oval */
 }
 
 .m-t {
-  font-family: 'Great Vibes', cursive;
-  font-size: 80px; /* Very large and dominant */
-  color: #F7F4EC;
+  font-family: 'Cinzel', serif;
+  font-size: 140px; /* Scaled down for mobile */
+  color: #ffffff; 
   position: absolute;
-  top: 40%;
+  top: 48%; /* Re-centered for the specific oval shape */
   left: 45%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  font-weight: 400;
+  line-height: 1;
 }
 
 .m-l {
   font-family: 'Great Vibes', cursive;
-  font-size: 85px; /* Slightly larger to allow the flourishes to spread */
-  color: #F7F4EC;
+  font-size: 160px; /* Scaled down for mobile */
+  color: #ffffff; 
   position: absolute;
-  top: 69%;
-  left: 48%;
+  top: 55%;
+  left: 55%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  /* Adjusting opacity slightly allows the intersection of the letters to look more integrated */
-  opacity: 1; 
+  line-height: 1;
 }
 
 .names-big{
